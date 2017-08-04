@@ -16,5 +16,10 @@ namespace COMP123_Assignment5
         {
             InitializeComponent();
         }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
