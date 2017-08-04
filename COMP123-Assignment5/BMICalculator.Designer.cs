@@ -31,6 +31,9 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.HeightLabel = new System.Windows.Forms.Label();
+            this.HeightResult = new System.Windows.Forms.TextBox();
+            this.WeightLabel = new System.Windows.Forms.Label();
+            this.WeightResult = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -61,17 +64,43 @@
             // HeightLabel
             // 
             this.HeightLabel.AutoSize = true;
-            this.HeightLabel.Location = new System.Drawing.Point(14, 251);
+            this.HeightLabel.Location = new System.Drawing.Point(6, 105);
             this.HeightLabel.Name = "HeightLabel";
             this.HeightLabel.Size = new System.Drawing.Size(199, 46);
             this.HeightLabel.TabIndex = 1;
             this.HeightLabel.Text = "My Height";
+            // 
+            // HeightResult
+            // 
+            this.HeightResult.Location = new System.Drawing.Point(14, 154);
+            this.HeightResult.Name = "HeightResult";
+            this.HeightResult.Size = new System.Drawing.Size(100, 53);
+            this.HeightResult.TabIndex = 2;
+            // 
+            // WeightLabel
+            // 
+            this.WeightLabel.AutoSize = true;
+            this.WeightLabel.Location = new System.Drawing.Point(12, 210);
+            this.WeightLabel.Name = "WeightLabel";
+            this.WeightLabel.Size = new System.Drawing.Size(208, 46);
+            this.WeightLabel.TabIndex = 3;
+            this.WeightLabel.Text = "My Weight";
+            // 
+            // WeightResult
+            // 
+            this.WeightResult.Location = new System.Drawing.Point(14, 259);
+            this.WeightResult.Name = "WeightResult";
+            this.WeightResult.Size = new System.Drawing.Size(100, 53);
+            this.WeightResult.TabIndex = 4;
             // 
             // BMICalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(23F, 46F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(298, 424);
+            this.Controls.Add(this.WeightResult);
+            this.Controls.Add(this.WeightLabel);
+            this.Controls.Add(this.HeightResult);
             this.Controls.Add(this.HeightLabel);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -92,6 +121,9 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label HeightLabel;
+        private System.Windows.Forms.TextBox HeightResult;
+        private System.Windows.Forms.Label WeightLabel;
+        private System.Windows.Forms.TextBox WeightResult;
     }
 }
 
