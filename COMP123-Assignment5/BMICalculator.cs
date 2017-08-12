@@ -61,7 +61,7 @@ namespace COMP123_Assignment5
             }
             else
             {
-                this.HeightUnitLabel.Text = "m";
+                this.HeightUnitLabel.Text = "meter";
                 this.WeightUnitLabel.Text = "kg";
             }
         }
