@@ -12,7 +12,7 @@ using System.Windows.Forms;
  * Name: Yanying Zhang - 300926213
  * Date: Aug.11 2017
  * Description: Assignment5
- * Version: 0.3 - Added CalculateButton_Click method
+ * Version: 0.4 - Added ResetButton_Click method
  */
 namespace COMP123_Assignment5
 {
@@ -41,8 +41,6 @@ namespace COMP123_Assignment5
         }
         
         // PRIVATE METHODS
-
-        // PUBLIC METHODS
 
             /// <summary>
             /// This is the method to choose the unit
@@ -109,5 +107,20 @@ namespace COMP123_Assignment5
             this.BMIResultTextBox.Text = Result;
         }
 
+       
+        /// <summary>
+        /// This method is to clear all the value entered
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ResetButton_Click(object sender, EventArgs e)
+        {
+            this.BMITextBox.Text = "";
+            this.BMIResultTextBox.Text = "";
+            this.WeightInputTextBox.Text = "";
+            this.HeightInputTextBox.Text = "";
+        }
+
+        // PUBLIC METHODS
     }
 }

@@ -40,6 +40,7 @@
             this.CalculateButton = new System.Windows.Forms.Button();
             this.BMIResultTextBox = new System.Windows.Forms.TextBox();
             this.MetricRadio = new System.Windows.Forms.RadioButton();
+            this.ResetButton = new System.Windows.Forms.Button();
             this.BMItableLayout.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -145,7 +146,7 @@
             // CalculateButton
             // 
             this.CalculateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CalculateButton.Location = new System.Drawing.Point(79, 213);
+            this.CalculateButton.Location = new System.Drawing.Point(31, 213);
             this.CalculateButton.Name = "CalculateButton";
             this.CalculateButton.Size = new System.Drawing.Size(97, 53);
             this.CalculateButton.TabIndex = 6;
@@ -174,11 +175,23 @@
             this.MetricRadio.UseVisualStyleBackColor = true;
             this.MetricRadio.Click += new System.EventHandler(this.radioButton_Clicked);
             // 
+            // ResetButton
+            // 
+            this.ResetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetButton.Location = new System.Drawing.Point(155, 213);
+            this.ResetButton.Name = "ResetButton";
+            this.ResetButton.Size = new System.Drawing.Size(97, 53);
+            this.ResetButton.TabIndex = 9;
+            this.ResetButton.Text = "Reset";
+            this.ResetButton.UseVisualStyleBackColor = true;
+            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
+            // 
             // BMICalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(23F, 46F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(298, 424);
+            this.Controls.Add(this.ResetButton);
             this.Controls.Add(this.MetricRadio);
             this.Controls.Add(this.BMIResultTextBox);
             this.Controls.Add(this.CalculateButton);
@@ -213,6 +226,7 @@
         private System.Windows.Forms.RadioButton MetricRadio;
         private System.Windows.Forms.Label HeightUnitLabel;
         private System.Windows.Forms.Label WeightUnitLabel;
+        private System.Windows.Forms.Button ResetButton;
     }
 }
 
