@@ -1,6 +1,6 @@
 ﻿namespace COMP123_Assignment5
 {
-    partial class SplashScreen
+    partial class SplashScreen 
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.splashLabel = new System.Windows.Forms.Label();
+            this.splashTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // splashLabel
@@ -41,6 +43,12 @@
             this.splashLabel.Size = new System.Drawing.Size(308, 92);
             this.splashLabel.TabIndex = 0;
             this.splashLabel.Text = "Welcome to my \r\n  BMI calculator";
+            // 
+            // splashTimer
+            // 
+            this.splashTimer.Enabled = true;
+            this.splashTimer.Interval = 2000;
+            this.splashTimer.Tick += new System.EventHandler(this.splashTimer_Tick);
             // 
             // SplashScreen
             // 
@@ -58,5 +66,6 @@
         #endregion
 
         private System.Windows.Forms.Label splashLabel;
+        private System.Windows.Forms.Timer splashTimer;
     }
 }
