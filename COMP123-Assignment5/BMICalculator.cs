@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,25 +13,40 @@ using System.Windows.Forms;
  * Name: Yanying Zhang - 300926213
  * Date: Aug.11 2017
  * Description: Assignment5
- * Version: 0.4 - Added ResetButton_Click method
+ * Version: 0.5 - Added _convertInput method
  */
 namespace COMP123_Assignment5
 {
     public partial class BMICalculator : Form
     {
         // PRIVATE INSTANCE VARIABLE
-        private bool _imperialClicked;
+        private double _bmi;
+
+        private string _result;
 
         // PUBLIC PROPERTIES
-        public bool ImperialClicked
+        
+        public double BMI
         {
             get
             {
-                return this._imperialClicked;
+                return this._bmi;
             }
             set
             {
-                this._imperialClicked = value;
+                this._bmi = value;
+            }
+        }
+
+        public string Result
+        {
+            get
+            {
+                return this._result;
+            }
+            set
+            {
+                this._result = value;
             }
         }
 
@@ -71,11 +87,9 @@ namespace COMP123_Assignment5
         /// <param name="e"></param>
         private void CalculateButton_Click(object sender, EventArgs e)
         {
-            double weight = Convert.ToDouble(WeightInputTextBox.Text);
-            double height = Convert.ToDouble(HeightInputTextBox.Text);
-
-            double BMI;
-            string Result = "";
+            double height = _convertInput(HeightInputTextBox.Text);
+            double weight = _convertInput((WeightInputTextBox.Text));
+            
             if (this.ImperialRadio.Checked)
             {
                 BMI = Math.Round(((weight * 703) / (height * height)), 1);
@@ -107,7 +121,20 @@ namespace COMP123_Assignment5
             this.BMIResultTextBox.Text = Result;
         }
 
-       
+       private double _convertInput(string inputString)
+        {
+            try
+            {
+                return Convert.ToDouble(inputString);
+            }
+            catch(Exception e)
+            {
+                Debug.WriteLine("An Error Occurred");
+                Debug.WriteLine(e.Message);
+            }
+            return 0;
+        }
+
         /// <summary>
         /// This method is to clear all the value entered
         /// </summary>
