@@ -28,19 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.splashLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // splashLabel
+            // 
+            this.splashLabel.AutoSize = true;
+            this.splashLabel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.splashLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.splashLabel.Location = new System.Drawing.Point(-5, 83);
+            this.splashLabel.Name = "splashLabel";
+            this.splashLabel.Size = new System.Drawing.Size(308, 92);
+            this.splashLabel.TabIndex = 0;
+            this.splashLabel.Text = "Welcome to my \r\n  BMI calculator";
             // 
             // SplashScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(298, 424);
+            this.Controls.Add(this.splashLabel);
             this.Name = "SplashScreen";
             this.Text = "SplashScreen";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label splashLabel;
     }
 }
