@@ -29,16 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SplashScreen));
             this.splashLabel = new System.Windows.Forms.Label();
             this.splashTimer = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // splashLabel
             // 
             this.splashLabel.AutoSize = true;
-            this.splashLabel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.splashLabel.BackColor = System.Drawing.Color.White;
             this.splashLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.splashLabel.Location = new System.Drawing.Point(-5, 83);
+            this.splashLabel.Location = new System.Drawing.Point(-4, -3);
             this.splashLabel.Name = "splashLabel";
             this.splashLabel.Size = new System.Drawing.Size(308, 92);
             this.splashLabel.TabIndex = 0;
@@ -47,17 +50,31 @@
             // splashTimer
             // 
             this.splashTimer.Enabled = true;
-            this.splashTimer.Interval = 2000;
+            this.splashTimer.Interval = 3000;
             this.splashTimer.Tick += new System.EventHandler(this.splashTimer_Tick);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-8, 92);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(312, 340);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // SplashScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(298, 424);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.splashLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "SplashScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SplashScreen";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -67,5 +84,6 @@
 
         private System.Windows.Forms.Label splashLabel;
         private System.Windows.Forms.Timer splashTimer;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
