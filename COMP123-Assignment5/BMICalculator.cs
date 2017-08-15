@@ -24,8 +24,12 @@ namespace COMP123_Assignment5
 
         private string _result;
 
+        private double _userHeight;
+
+        private double _userWeight;
+
         // PUBLIC PROPERTIES
-        
+
         public double BMI
         {
             get
@@ -47,6 +51,29 @@ namespace COMP123_Assignment5
             set
             {
                 this._result = value;
+            }
+        }
+
+        public double UserHeight
+        {
+            get
+            {
+                return this._userHeight;
+            }
+            set
+            {
+                this._userHeight = value;
+            }
+        }
+        public double UserWeight
+        {
+            get
+            {
+                return this._userWeight;
+            }
+            set
+            {
+                this._userWeight = value;
             }
         }
 
@@ -87,16 +114,16 @@ namespace COMP123_Assignment5
         /// <param name="e"></param>
         private void CalculateButton_Click(object sender, EventArgs e)
         {
-            double height = _convertInput(HeightInputTextBox.Text);
-            double weight = _convertInput((WeightInputTextBox.Text));
+            UserHeight = _convertInput(HeightInputTextBox.Text);
+            UserWeight = _convertInput((WeightInputTextBox.Text));
             
             if (this.ImperialRadio.Checked)
             {
-                BMI = Math.Round(((weight * 703) / (height * height)), 1);
+                BMI = Math.Round(((UserWeight * 703) / (UserHeight * UserHeight)), 1);
             }
             else
             {
-                BMI = Math.Round((weight / (height * height)), 1);
+                BMI = Math.Round((UserWeight / (UserHeight * UserHeight)), 1);
             }
 
             if (BMI < 18.5)
